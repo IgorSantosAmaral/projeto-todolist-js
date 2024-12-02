@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #f5a55b;
+    --cor-secundaria: #c27a37;
+    --neutro: #F9F9F9;
+    --preto: #131730;
+    --cor-check: rgb(41, 143, 4);
+    --fonte-titulo: "Krona One", sans-serif;
+    --fonte-texto: "Numans", sans-serif;
+    --cor-placeholder: #6C757D;
+    --font-placeholder: "Inter", sans-serif;
+    --degrade-verde: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(27,103,0,1)  50%,rgba(58,158,23,1) 100%)
+}
+
+body {
+    background: var(--degrade-verde);
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    margin-top: 64px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    width: 440px;
+    align-items: center;
+
+    background-color: var(--neutro);
+    padding: 56px;
+    border-radius: 16px;
+}
+
+.carrinho-compra {
+    height: 150px;
+    width: 150px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#input-item {
+    padding: 12px 16px;
+    display: block;
+    border-radius: 24px;
+    border: 1px solid var(--preto);
+    width: 307px;
+}
+
+#input-item::placeholder {
+    font-family: "Inter" sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--cor-placeholder);
+}
+
+#add-item {
+    text-align: center;
+    padding: 12px 16px;
+    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    color: var(--neutro);
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    line-height: 24px;
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    font-size: 20px;
+    line-height: 33px;
+    text-align: left;
+}
+
+hr {
+    border: none;
+    border-bottom: 3px dotted var(--cor-primaria);
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.item-lista-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container-nome-compra {
+    display: flex;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-custom {
+    width: 20px;
+    height: 20px;
+    background-color: var(--neutro);
+    border: 1px solid var(--preto);
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.checked {
+    background-color: var(--cor-check);
+    position: relative;
+}
+
+.checked::after {
+    content: "";
+    position: absolute;
+    left: 30%;
+    top: -5%;
+    width: 5px;
+    height: 14px;
+
+    border-top: 2px solid var(--neutro);
+    border-left: 2px solid var(--neutro);
+    transform: rotate(-140deg);
+}
+
+p {
+    font-family: var(--fonte-texto);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.container-bt-del-edit {
+    width: 50px;
+}
+
+.bt-del-edit {
+    background-color: transparent;
+    border: none;
+}
+
+.icon-del-edit{
+    height: 20px;
+    width: 20px;
+}
+
+.texto-data {
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.container-lista {
+    width: 100%;
+}
+
